@@ -135,7 +135,7 @@ pipeline {
             steps {
                 script {
 			 		sh """
-			 			scp dvdtheque-batch/target/$BATCH_ARTIFACT jenkins@${DEV_SERVER2_IP}:/opt/dvdtheque_batch_service/dvdtheque-batch.jar
+			 			scp dvdtheque-batch/target/$ARTIFACT jenkins@${DEV_SERVER2_IP}:/opt/dvdtheque_batch_service/dvdtheque-batch.jar
 			 		"""
 			 	}
             }
@@ -147,7 +147,7 @@ pipeline {
             steps {
                 script {
                 	sh """
-			 			scp dvdtheque-batch/target/$BATCH_ARTIFACT jenkins@${PROD_SERVER1_IP}:/opt/dvdtheque_batch_service/dvdtheque-batch.jar
+			 			scp dvdtheque-batch/target/$ARTIFACT jenkins@${PROD_SERVER1_IP}:/opt/dvdtheque_batch_service/dvdtheque-batch.jar
 			 		"""
 			 	}
             }
